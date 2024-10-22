@@ -1,0 +1,238 @@
+/* Basic styling for the whole page */
+body {
+    background-image: linear-gradient(#636162, #b1a7af);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main container styling */
+.main {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side container for profile image */
+.left {
+    background-color: #fbb03b;
+    flex: 1 1 200px;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Right side container for resume form and content */
+.right {
+    flex: 1 1 450px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile image styling */
+.profile-img {
+    height: 180px;
+    width: 180px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 10px solid #fbb03b;
+    box-shadow: 6px 7px 9px 5px #fbb03b73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Heading style for form sections */
+.heading {
+    background-color: #4d4d4d;
+    padding: 10px;
+    color: #fbb03b;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Form layout and styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styles */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Button styling */
+form button {
+    padding: 10px;
+    background-color: #fbb03b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #e49f2f;
+}
+
+/* Skills section styling */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Gender section styling */
+.gender-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.gender-radio {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Styling for the editable sections of the resume */
+.editable-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: text;
+    background-color: #fff;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+.editable-section[contenteditable="true"]:focus {
+    border-color: #fbb03b;
+    outline: none;
+}
+
+/* Container to display the resume after form submission */
+#resume-output {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+}
+
+#resume-output h2 {
+    font-size: 24px;
+    color: #4d4d4d;
+    margin-bottom: 20px;
+}
+
+#resume-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Resume sections */
+#resume-content .editable-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: text;
+    background-color: #fff;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+#resume-content .editable-section[contenteditable="true"]:focus {
+    border-color: #fbb03b;
+    outline: none;
+}
+
+/* Button styling for the resume */
+#resume-output button {
+    padding: 10px;
+    background-color: #fbb03b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#resume-output button:hover {
+    background-color: #e49f2f;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        flex: 1 1 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+}
